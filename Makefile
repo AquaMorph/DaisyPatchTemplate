@@ -14,3 +14,7 @@ daisysp:
 	cd $(DAISYSP_DIR) && make
 lib: libdaisy daisysp
 deploy: lib all program-dfu
+clean:
+	rm -fR build
+	cd $(LIBDAISY_DIR) && make clean
+	cd $(DAISYSP_DIR) && make clean
