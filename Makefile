@@ -18,3 +18,7 @@ clean:
 	rm -fR build
 	cd $(LIBDAISY_DIR) && make clean
 	cd $(DAISYSP_DIR) && make clean
+pulllibs:
+	cd $(LIBDAISY_DIR) && make clean && git pull origin master
+	cd $(DAISYSP_DIR) && make clean && git pull origin master
+updatelibs: pulllibs lib
